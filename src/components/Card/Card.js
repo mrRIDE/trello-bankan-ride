@@ -3,12 +3,12 @@ import "./Card.scss";
 
 function Card({ card }) {
   return (
-    <li className="card-item">
+    <div className="card-item">
       {card.avatar && (
         <img src={card.avatar} className="card-avatar" alt="than-thanh-img" />
       )}
       Title : {card.title}
-    </li>
+    </div>
   );
 }
 

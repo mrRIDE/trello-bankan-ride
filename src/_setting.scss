@@ -1,5 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600");
 
+$navbar-app-height: 4vh;
+$navbar-board-height: 6vh;
+$board-content-height: calc(
+  100vh - #{$navbar-app-height} - #{$navbar-board-height}
+);
+
 $appbar-bg-color: #0067a3;
 $board-bg-color: #0079bf;
 $list-bg-color: #ebecf0;
