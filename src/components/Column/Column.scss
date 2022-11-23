@@ -1,0 +1,40 @@
+@import "../../_setting.scss";
+
+.column {
+  flex: 0 0 auto;
+  width: 300px;
+  height: calc(100% - #{$gap});
+  margin-left: $gap;
+  > * {
+    background-color: $list-bg-color;
+    color: #333;
+    padding: 0 8px;
+  }
+
+  header {
+    padding-left: 15px;
+    height: $column-header-height;
+    line-height: 36px;
+    font-size: 16px;
+    font-weight: bold;
+    border-top-left-radius: $column-header-radius;
+    border-top-right-radius: $column-header-radius;
+  }
+
+  footer {
+    padding-left: 15px;
+    height: $column-footer-height;
+    line-height: 36px;
+    border-bottom-left-radius: $column-footer-radius;
+    border-bottom-right-radius: $column-footer-radius;
+  }
+
+  ul.task-list {
+    list-style-type: none;
+    margin: 0;
+    max-height: calc(
+      100% - #{$column-header-height} - #{$column-footer-height}
+    );
+    overflow-y: auto;
+  }
+}

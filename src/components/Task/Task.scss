@@ -1,0 +1,32 @@
+@import "../../_setting.scss";
+
+li.task-item {
+  background-color: white;
+  border-radius: $card-border-radius;
+  box-shadow: 0 1px 1px rgb(0, 0, 0, 0.1);
+  padding: $gap;
+  &:not(:last-child) {
+    margin-bottom: $gap;
+  }
+
+  &::-webkit-scrollbar {
+    -webkit-appearance: none;
+  }
+
+  &::-webkit-scrollbar:vertical {
+    width: 5px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: darken($list-bg-color, 15);
+    border-right: 5px solid $list-bg-color;
+  }
+
+  img {
+    display: block;
+    width: calc(100% + 2 * #{$gap});
+    margin: -$gap 0 $gap (-$gap);
+    border-top-left-radius: $card-border-radius;
+    border-top-right-radius: $card-border-radius;
+  }
+}
