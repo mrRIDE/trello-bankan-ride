@@ -1,13 +1,19 @@
+import { map } from "lodash";
 import React from "react";
-import Task from "../Task/Task";
+import { mapOrder } from "../../utilities/sort";
+import Card from "../Card/Card";
 import "./Column.scss";
 
-function Column() {
+function Column({ column }) {
+  const cards = mapOrder(column.cards, column.cardOrder, "id");
+
   return (
     <div className="column">
-      <header>BrainStorm</header>
-      <ul className="task-list">
-        <Task />
+      <header>{column.title}</header>
+      <ul className="card-list">
+        {cards.map((card, index) => (
+          <Card key={index} card={card} />
+        ))}
       </ul>
       <footer>Add another Line</footer>
     </div>
